@@ -13,7 +13,7 @@ public class HospitalAdapter {
         hospital.setAddress(columns.get(2));
         hospital.setZipCode(columns.get(3));
         hospital.setHospitalName(columns.get(4));
-        hospital.setCategory(columns.get(5));
+        hospital.setCategories(List.of(columns.get(5).split(",")));
         return hospital;
     }
 }

@@ -1,11 +1,13 @@
 package br.com.lais.projeto;
 
-import br.com.lais.projeto.logic.CSVFile;
+import br.com.lais.projeto.db.HospitalDatabase;
 
 public class Principal {
 
     public static void main(String[] args) {
-        CSVFile csvFile = new CSVFile();
-        csvFile.read();
+        HospitalDatabase hospitalDatabase = new HospitalDatabase();
+        var hospitals = hospitalDatabase.find("SAO PAULO", "SAO MIGUEL", "FISICA");
+        System.out.println(hospitals.size());
+        System.out.println(hospitals);
     }
 }
